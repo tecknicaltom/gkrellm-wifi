@@ -1,0 +1,11 @@
+Ideas for gkrellm-wifi
+======================
+- substitution in alert and launcher commands
+- optimize create_chart_text()
+- average quality label
+- add optional debug output using log handler
+- get /proc/net/wireless programmatically
+- ability to display channel, frequency etc.
+- add install target to Makefile
+- full i18n support
+- switch to using autoconf, automake etc.

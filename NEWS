@@ -1,0 +1,43 @@
+Overview of Changes in gkrellm-wifi 0.9.12
+==========================================
+- added bit rate chart label
+- added ESSID chart label
+- much improved check for wireless extension version - the plug-in
+  should now work with WE versions < 16 as well.
+- no longer need to recompile the plug-in when changing kernel
+  versions
+- code clean-up
+
+
+Overview of Changes in gkrellm-wifi 0.9.11
+==========================================
+- added option to enable/disable an interface
+- added option to always show an interface
+- minor bug fixes
+- major code clean-up
+
+Note: if upgrading from an earlier version of gkrellm-wifi to 0.9.11
+(or above) you will need to manually re-enable the interfaces in the
+preferences due to a change in the configuration file format.
+
+
+Overview of Changes in gkrellm-wifi 0.9.10
+==========================================
+- no user visible changes; code clean-up only.
+
+
+Overview of Changes in gkrellm-wifi 0.9.9
+=========================================
+- ability to set how long a condition must exist before it triggers an
+  alert
+
+
+Overview of Changes in gkrellm-wifi 0.9.8
+=========================================
+- added a per chart alert
+
+
+Overview of Changes in gkrellm-wifi 0.9.7
+=========================================
+- Required version of GKrellM is now >=2.1.12
+- added per chart launcher

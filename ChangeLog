@@ -1,0 +1,211 @@
+2004-01-03  Henrik Brix Andersen  <brix@gimp.org>
+
+	* Released version 0.9.12.
+
+2004-01-02  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi-preferences.c (gkrellm_wifi_preferences_show):
+	added a new format string to the combo box.
+
+	* gkrellm-wifi-linux.c: changed a couple of g_message() calls to
+	g_warning() calls.
+
+2003-12-31  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.h
+	* gkrellm-wifi-chart.c
+	* gkrellm-wifi-linux.c
+	* gkrellm-wifi-preferences.c: added ability to show the ESSID
+	in a chart label.
+
+2003-12-31  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi-linux.c (get_quality_max): code clean-up.
+
+	* Makefile (CFLAGS): added -DG_LOG_DOMAIN
+
+	* gkrellm-wifi-linux.c: use it.
+
+2003-12-31  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi-linux.c (gkrellm_wifi_wireless_info_read): handle
+	drivers which report quality in dBm.
+
+	* INSTALL: removed note about re-compiling again.
+
+	* gkrellm-wifi.h (struct GkrellmWifiMonitor): use guint8 for
+	quality_max and gint32 for bitrate.
+
+	* gkrellm-wifi-linux.c: removed check for WE version in
+	gkrellm_wifi_wireless_info_read(), added compatibility code to
+	get_quality_max() - it should work with WE versions prior to 16
+	now.
+
+	* Makefile: removed -I/usr/src/linux/include from CFLAGS (you can
+	do 'CFLAGS=-I/usr/src/linux/include make' to get it back).
+	Clean-up.
+
+2003-12-30  Henrik Brix Andersen  <brix@gimp.org>
+
+	* INSTALL: added a note about re-compiling the plug-in when
+	upgrading the kernel.
+
+	* gkrellm-wifi-linux.c: only issue warning about wireless
+	extension mismatch once.
+
+	* gkrellm-wifi.h
+	* gkrellm-wifi-chart.c
+	* gkrellm-wifi-linux.c
+	* gkrellm-wifi-preferences.c: automatically add prefix of k, M or
+	G to bitrate label.
+
+2003-12-29  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi-linux.c (gkrellm_wifi_wireless_info_read): removed
+	ambiguous break statement.
+
+	* Makefile: removed DEBUG_CFLAGS variable, respect CFLAGS
+	environment variable, added missing dependencies.
+
+	* gkrellm-wifi.[ch]
+	* gkrellm-wifi-chart.c
+	* gkrellm-wifi-linux.c
+	* gkrellm-wifi-preferences.c: added ability to show the bit rate
+	in a chart label.
+
+	* gkrellm-wifi-linux.c: renamed get_wireless_range() to
+	get_quality_max().
+
+2003-12-28  Henrik Brix Andersen  <brix@gimp.org>
+
+	* README
+	* gkrellm-wifi-preferences.c: changed description a bit.
+
+	* gkrellm-wifi.: bumped version to 0.9.12.
+
+2003-12-28  Henrik Brix Andersen  <brix@gimp.org>
+
+	* Released version 0.9.11.
+
+2003-12-28  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c (gkrellm_wifi_update): removed calls to
+	gkrellm_draw_panel_label() and gkrellm_draw_panel_layers(), check
+	if updated before storing chart data.
+
+	* gkrellm-wifi.c
+	* gkrellm-wifi-chart.[ch]: made panel and chart callbacks static,
+	make the connects in gkrellm_wifi_chart_create().
+
+	* gkrellm-wifi.c: changed accordingly.
+
+2003-12-27  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi-preferences.c: changed gui spacings to be
+	consistent with gkrellm itself.
+
+	* Makefile
+	* gkrellm-wifi-monitor.[ch]: new files - moved
+	gkrellm_wifi_monitor_compare() from gkrellm-wifi.[ch] to
+	here. Added gkrellm_wifi_monitor_create() and
+	gkrellm_wifi_monitor_find().
+
+	* gkrellm-wifi.h: renamed WifiMon to GkrellmWifiMonitor, changed
+	several struct member names, changed names of defines.
+
+	* gkrellm-wifi-*.c: changed accordingly. Renamed all functions
+	from wifi_plugin_*() to gkrellm_wifi_*(). Lots of code clean-up.
+
+2003-12-23  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi-linux.c: moved code from parse_proc_net_wireless() into
+	wifi_plugin_wireless_info_read().
+
+	* Makefile: minor clean-up.
+
+	* gkrellm-wifi.[ch]
+	* gkrellm-wifi-linux.c
+	* gkrellm-wifi-preferences.c: added options for enabling/disabling
+	and forcing an interface.
+
+	* gkrellm-wifi-preferences.c: renamed _config to _preferences,
+	added static keyword to format_combo variable, fixed minor bug
+	related to tooltip_entry typo.
+
+	* gkrellm-wifi.h: bumped version to 0.9.11.
+
+2003-12-22  Henrik Brix Andersen  <brix@gimp.org>
+
+	* Released beta version 0.9.10.
+
+	* gkrellm-wifi-alert.[ch]
+	* gkrellm-wifi-chart.[ch]
+	* gkrellm-wifi-config.[ch]
+	* gkrellm-wifi-linux.[ch]
+	* gkrellm-wifi.[ch]: split the code up in mulitple files.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c: released beta version 0.9.9.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c (create_alert): added call to
+	gkrellm_alert_delay_config().
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c: released beta version 0.9.8.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c (create_alert): use the interface name for the
+	alert.
+
+	* gkrellm-wifi.c: added g_assert() sanity checks all over.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c: added a per chart alarm.
+
+	* gkrellm-wifi.c: always pass a pointer to a WifiMon as user_data
+	in callbacks.
+
+	* gkrellm-wifi.c: renamed wifi_stat_t to WifiMon.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c (VERSION_MICRO): bumped version to 0.9.8.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c: released beta version 0.9.7.
+
+2003-12-21  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c: added per chart launcher.
+
+	* NEWS: file added.
+
+	* gkrellm-wifi.c (update_plugin): removed unnecessary casts to
+	G_OBJECT.
+
+	* gkrellm-wifi.c (create_plugin_tab): added a per-device
+	configuration tab - not finished yet.
+
+	* Makefile: use 'pkg-config gkrellm' instead of 'pkg-config
+	gtk+-2.0'.
+
+	* INSTALL: added a note about required versions of gkrellm and
+	gtk+.
+
+	* gkrellm-wifi.c (VERSION_MICRO): bumped version to 0.9.7.
+
+2003-12-20  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c (create_plugin_tab): added a new format string to
+	the list of pre-defined chart format strings.
+
+2003-12-20  Henrik Brix Andersen  <brix@gimp.org>
+
+	* gkrellm-wifi.c: first beta version 0.9.6 released.

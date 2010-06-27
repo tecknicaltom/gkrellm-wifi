@@ -1,0 +1,14 @@
+Theming the gkrellm-wifi Plug-In
+================================
+
+This plug-in can be themed by placing custom images in the
+"gkrellm-wifi" subdirectory of a theme.
+
+The standard images used are:
+
+bg_chart.png
+bg_grid.png
+bg_panel.png
+krell.png
+spacer_top.png
+spacer_bottom.png

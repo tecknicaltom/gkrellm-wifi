@@ -1,0 +1,10 @@
+Installing the gkrellm-wifi Plug-In
+===================================
+
+This plug-in requires GKrellM version 2.1.12 or above and GTK+-2.0 or
+above. The plug-in also requires the kernel to have support for the
+Linux Wireless Extensions (CONFIG_NET_RADIO).
+
+You can compile this plug-in by running 'make' and copying the
+resulting gkrellm-wifi.so file to one of the GKrellM plug-in
+directories (or to ~/.gkrellm2/plugins/).

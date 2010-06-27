@@ -1,0 +1,8 @@
+README for the gkrellm-wifi Plug-In
+===================================
+
+This plug-in monitors the wireless LAN cards in your computer and
+displays a graph of the link quality percentage for each card.
+
+The plug-in requires the kernel to have support for the Linux Wireless
+Extensions (CONFIG_NET_RADIO).
